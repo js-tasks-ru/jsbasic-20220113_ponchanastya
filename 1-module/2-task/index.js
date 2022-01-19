@@ -1,16 +1,15 @@
-/**
- * Эту функцию трогать не нужно
- */
+const invalidNameFormat = (name) => name === null || name.trim().split(' ').length > 1 || name.length < 4;
+
 function print(text) {
   console.log(text);
 }
 
-/**
- * Эту функцию нужно поменять так,
- * чтобы функция sayHello работала корректно
- */
 function isValid(name) {
-  // ваш код...
+  if (!invalidNameFormat(name)) {
+    return true; 
+  } else {
+    return false;
+  }
 }
 
 function sayHello() {
